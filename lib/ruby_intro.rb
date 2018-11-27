@@ -4,14 +4,20 @@
 
 def sum arr
   # YOUR CODE HERE
+  arr.reduce(0, :+)
 end
 
 def max_2_sum arr
   # YOUR CODE HERE
+  arr.max(2).reduce(0, :+)
 end
 
 def sum_to_n? arr, n
   # YOUR CODE HERE
+  # that takes an array of integers and an additional integer, n, as arguments 
+  # and returns true if any two elements in the array of integers sum to n. An 
+  # empty array should sum to zero by definition
+  arr.combination(2).map { |x,y| x+y == n }.include?(true)
 end
 
 # Part 2
